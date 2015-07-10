@@ -1,5 +1,6 @@
-FROM progrium/busybox:latest
+FROM gliderlabs/alpine
 MAINTAINER Wes Morgan <cap10morgan@gmail.com>
 
-RUN opkg-install bash curl wget ca-certificates
+RUN apk --update add bash curl ca-certificates
+
 CMD ["/bin/bash"]
